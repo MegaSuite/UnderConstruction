@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Under Construction</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="message">Under Construction</h1>
+    <script>
+        let messageElement = document.getElementById('message');
+        let dotCount = 0;
+
+        function updateMessage() {
+            dotCount = (dotCount % 6) + 1; // Update dot count
+            let dots = '.'.repeat(dotCount); // Create dots
+            messageElement.textContent = `Under Construction${dots}`;
+        }
+
+        setInterval(updateMessage, 500); // Update every 500 milliseconds
+    </script>
+</body>
+</html>
